@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import mongoose, { ConnectOptions } from "mongoose";
-import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import cors from "cors";
@@ -16,7 +15,7 @@ const PORT = 5001;
 app.use(express.json());
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({}));
 
 const localURL = "mongodb://localhost:27017/auth-demo";
 
